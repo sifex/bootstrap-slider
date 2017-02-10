@@ -1,5 +1,5 @@
 /*! =======================================================
-                      VERSION  9.7.1-sifex              
+                      VERSION  9.7.2-sifex              
 ========================================================= */
 "use strict";
 
@@ -1289,7 +1289,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				var formattedTooltipVal;
 
 				if (this.options.range) {
-					formattedTooltipVal = this.options.formatter(this._state.value);
+					formattedTooltipVal = this.options.tooltip_prefix + this.options.formatter(this._state.value) + this.options.tooltip_suffix;
 					this._setText(this.tooltipInner, formattedTooltipVal);
 					this.tooltip.style[this.stylePos] = (positionPercentages[1] + positionPercentages[0]) / 2 + "%";
 
@@ -1321,7 +1321,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 						this._css(this.tooltip_max, "margin-" + this.stylePos, -this.tooltip_max.offsetWidth / 2 + "px");
 					}
 				} else {
-					formattedTooltipVal = this.options.formatter(this._state.value[0]);
+					formattedTooltipVal = this.options.tooltip_prefix + this.options.formatter(this._state.value[0]) + this.options.tooltip_suffix;
 					this._setText(this.tooltipInner, formattedTooltipVal);
 
 					this.tooltip.style[this.stylePos] = positionPercentages[0] + "%";
