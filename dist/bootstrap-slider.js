@@ -1,5 +1,5 @@
 /*! =======================================================
-                      VERSION  9.7.1              
+                      VERSION  9.7.1-sifex              
 ========================================================= */
 "use strict";
 
@@ -830,6 +830,8 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				range: false,
 				selection: 'before',
 				tooltip: 'show',
+				tooltip_prefix: '',
+				tooltip_suffix: '',
 				tooltip_split: false,
 				handle: 'round',
 				reversed: false,
@@ -887,6 +889,10 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 					this._addClass(this.handle2, 'hide');
 					if (this.options.selection === 'after') {
 						this._state.value[1] = this.options.max;
+					} else if (this.options.selection === 'middle') {
+						this._state.value[1] = (this.options.max + this.options.min) / 2;
+					} else if (this.options.selection === 'zero') {
+						this._state.value[1] = 0;
 					} else {
 						this._state.value[1] = this.options.min;
 					}
@@ -1108,7 +1114,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				this._state.over = false;
 			},
 			_setToolTipOnMouseOver: function _setToolTipOnMouseOver(tempState) {
-				var formattedTooltipVal = this.options.formatter(!tempState ? this._state.value[0] : tempState.value[0]);
+				var formattedTooltipVal = this.options.tooltip_prefix + this.options.formatter(!tempState ? this._state.value[0] : tempState.value[0]) + this.options.tooltip_suffix;
 				var positionPercentages = !tempState ? getPositionPercentages(this._state, this.options.reversed) : getPositionPercentages(tempState, this.options.reversed);
 				this._setText(this.tooltipInner, formattedTooltipVal);
 

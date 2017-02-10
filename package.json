@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap-slider",
-  "version": "9.7.1",
+  "name": "bootstrap-slider-sifex",
+  "version": "9.7.1-sifex",
   "description": "Slider view component for Twitter Bootstrap.",
   "main": "dist/bootstrap-slider.js",
   "style": "dist/css/bootstrap-slider.css",
@@ -10,13 +10,13 @@
     "release": "sh ./scripts/release.sh",
     "update-gh-pages": "sh ./scripts/update-gh-pages.sh"
   },
-  "homepage": "http://github.com/seiyria/bootstrap-slider",
+  "homepage": "http://github.com/sifex/bootstrap-slider",
   "repository": {
     "type": "git",
     "url": "git://github.com/seiyria/bootstrap-slider.git"
   },
   "bugs": {
-    "url": "http://github.com/seiyria/bootstrap-slider/issues"
+    "url": "http://github.com/sifex/bootstrap-slider/issues"
   },
   "author": "bootstrap-slider ",
   "contributors": [
