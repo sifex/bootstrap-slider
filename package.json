@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-slider-sifex",
-  "version": "9.7.4-sifex",
+  "version": "9.7.5-sifex",
   "description": "Slider view component for Twitter Bootstrap.",
   "main": "dist/bootstrap-slider.js",
   "style": "dist/css/bootstrap-slider.css",
