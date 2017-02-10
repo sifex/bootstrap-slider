@@ -916,6 +916,10 @@ const windowIsDefined = (typeof window === "object");
 					this._addClass(this.handle2, 'hide');
 					if (this.options.selection === 'after') {
 						this._state.value[1] = this.options.max;
+					} else if (this.options.selection === 'middle') {
+						this._state.value[1] = (this.options.max + this.options.min) / 2;
+					} else if (this.options.selection === 'zero') {
+						this._state.value[1] = 0;
 					} else {
 						this._state.value[1] = this.options.min;
 					}
